@@ -1,6 +1,10 @@
+# Information about the branch
+
+The "main" branch provides the configuration of my frontend part on Angular. To go to the frontend part, go to the "master" branch
 # CloudComApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.9.
+
 
 ## Development server
 
