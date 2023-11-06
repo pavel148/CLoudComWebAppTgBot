@@ -1,6 +1,7 @@
-# Information about the branch
+# Информация о ветке
 
-The "main" branch provides the configuration of my frontend part on Angular. To go to the frontend part, go to the "master" branch
+Ветвь "main" обеспечивает конфигурацию моей интерфейсной части на Angular. Чтобы перейти к интерфейсной части, перейдите в ветку "master"
+
 # CloudComApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.9.
