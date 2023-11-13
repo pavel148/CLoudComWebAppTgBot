@@ -1,8 +1,8 @@
 package korobkin.CLOUDCOM.model;
 
 
-import jakarta.persistence.*;
 
+import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -17,7 +17,10 @@ public class Role {
     private Set<UserRole> userRoles  = new HashSet<>();
     public Role() {
     }
-
+    public Role(Long roleId,String roleName) {
+        this.roleId = roleId;
+        this.roleName = roleName;
+    }
     public Set<UserRole> getUserRoles() {
         return userRoles;
     }

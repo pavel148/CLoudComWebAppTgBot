@@ -1,6 +1,7 @@
 package korobkin.CLOUDCOM.model;
 
-import jakarta.persistence.*;
+
+import javax.persistence.*;
 
 @Entity
 public class UserRole {
