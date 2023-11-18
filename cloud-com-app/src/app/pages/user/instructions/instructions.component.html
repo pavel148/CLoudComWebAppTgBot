@@ -1,0 +1,64 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <mat-card>
+                    <mat-card-header>
+                            <!--Заголовок-->
+
+                            <mat-card-title>
+                                Прочитайте пожалуйста интсрукцию к прохожднию теста
+                            </mat-card-title>
+
+                            <mat-card-subtitle>
+                                Осталось сделать еще один шаг
+                            </mat-card-subtitle>
+                    </mat-card-header>
+
+                    <mat-card-content class="ml20">
+                            <!--Контент-->
+
+                            <h1>{{quiz.title}}</h1>
+                            <p>{{quiz.description}}</p>
+                            <mat-divider></mat-divider>
+                            <h1>Важно</h1>
+                            <ul>
+                             
+                                <li>Этот тест предназначен только для практических целей</li>
+                                <!--Предпологаеться что на на один вопрос даеться 1 минута-->
+                                <li>Вы должны отправить тест в установленные сроки <b>{{quiz.numberOfQuestions}} минут</b></li>
+                                <li> Вы можете проходить тест в любое время </li>
+                                <li>В тесте  <b>{{quiz.numberOfQuestions}} вопросов</b></li>
+                                <li>Каждый вопрос оцениваеться в <b>{{quiz.maxMarks/quiz.numberOfQuestions}} баллов </b>. За неправильный ответ даеться 0 баллов</li>
+                                <li>К каждому вопросу будет предложено несколько вариантов ответа</li>
+                            </ul>
+                            <mat-divider></mat-divider>
+                            <br>
+                        
+                            <h1>Попытка викторины</h1>
+                            <ul>
+                            <li>Нажмите кнопку <b>Начать тест</b>, чтобы начать тест</li>
+                            <li>
+                            Отсчет времени начнется в тот момент, когда вы нажмете кнопку  <b>Начать тестирование. </b>
+                            </li>
+                            <li>
+                            Вы не сможете возобновить этот тест, если он прерван по какой-либо причине.
+                            </li>
+                            <li>Нажмите на кнопку <b>Далее</b> , чтобы перейти к следующему вопросу.</li>
+                            <li>По завершении теста нажмите на кнопку  <b>Отправить тест</b>.</li>
+                            <li>
+                            Отчет о тестировании автоматически генерируется в формате PDF
+                            
+                            </li>
+                            </ul>
+                    </mat-card-content>
+
+                    <mat-card-actions class="text-center mt20 ml20">
+                       <button class="" mat-raised-button color="primary">Начать  тестирование</button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+
+</div>

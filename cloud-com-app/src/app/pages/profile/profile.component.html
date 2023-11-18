@@ -1,0 +1,54 @@
+<mat-card>
+    <h1>
+        &nbsp; Добро пожаловать на страницу Администратора
+    </h1>
+    <mat-card-content>
+        <div class="bootstrap-wrapper">
+            <div class="container text-center">
+                <div class="container">
+                    <img src="https://i.pinimg.com/originals/31/ec/2c/31ec2ce212492e600b8de27f38846ed7.jpg"
+                        alt=""
+                        class="profile-image"
+                    />
+                    <h1 class="mt20">{{user.firstName}} {{user.lastName}}</h1>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-50 offset-md-1 text-center-button">
+                        <!--Добавить таблицу   -->
+                        <table class="table text-center">
+                            <tbody>
+                                <tr>
+                                    <td>Имя</td>
+                                    <td>{{user.firstName}}</td>
+                                </tr>
+                                <tr>
+                                    <td>User Id</td>
+                                    <td>MENTOR {{user.id}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Телефон</td>
+                                    <td>{{user.phone}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Роль</td>
+                                    <td>{{user.authorities[0].authority}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Статус</td>
+                                    <td>{{user.enabled?"АКТИВНЫЙ":"НЕАКТИВИРОВАННЫЙ"}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </mat-card-content>
+    <mat-card-actions class="text-center-button">
+        <button mat-raised-button color="primary">ОБНОВИТЬ</button>
+        <p>    &nbsp;</p>
+        <button mat-raised-button color="accent">ИЗМЕНИТЬ</button>
+    </mat-card-actions>
+</mat-card>

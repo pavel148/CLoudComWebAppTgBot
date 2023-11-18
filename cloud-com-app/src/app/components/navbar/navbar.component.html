@@ -1,1 +1,59 @@
 
+
+<mat-toolbar color='primary'>
+    <a 
+    routerLink="/"
+    mat-icon-button
+     class="example-icon"
+      aria-label="Example icon-button with menu icon"
+      >
+      <mat-icon>menu_book</mat-icon>
+</a>
+    <span>PROTest</span>
+    <span class="exemple-spacer"></span>
+        <a 
+        *ngIf="!isLoggedIn"
+       [routerLink]="'/login'"
+            mat-button
+            class="example-icon favorite-icon  mr50"
+            aria-label="Example icon-button with heart icon"
+          >
+            Войти
+        </a>
+        <button 
+        *ngIf="!isLoggedIn"
+        [routerLink]="'/sigup'" 
+            class="example-icon favorite-icon  mr50"
+            aria-label="Example icon-button with heart icon"
+            mat-button
+          >
+            Регистрация    
+        </button>
+
+
+
+      
+
+        <button
+        (click)="logout()"
+        *ngIf="isLoggedIn"
+        mat-button
+            class="example-icon favorite-icon  mr50"
+            aria-label="Example icon-button with heart icon"
+         
+          >
+            Выход    
+        </button>
+ 
+
+        <button 
+        *ngIf="isLoggedIn && user"
+        class="example-icon favorite-icon mr50"
+        mat-button
+        routerLink="/admin/profile"
+        aria-label="Example icon-button with heart icon"
+      >
+      {{ user.username }}
+      </button>
+
+  </mat-toolbar>

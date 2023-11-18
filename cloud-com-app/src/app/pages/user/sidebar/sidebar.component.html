@@ -1,0 +1,25 @@
+<mat-card>
+    <mat-action-list>
+        <div mat-subheader>Доступные курсы</div>
+    
+
+        <button mat-list-item routerLink="/user-dashboard/0" >
+            <mat-icon mat-list-icon style="margin-top: 0;">quiz</mat-icon>
+            <span style="margin-top: 0; margin-left: 10px;">Все категории</span>
+        </button>
+
+
+
+        <button   mat-list-item *ngFor="let c of categories" [routerLink]="'/user-dashboard/'+ c.cid">
+            <mat-icon mat-list-icon style="margin-top: 0;">quiz</mat-icon>
+            <span style="margin-top: 0; margin-left: 10px;">{{c.title}}</span>
+        </button>
+
+        
+        
+        <button mat-list-item routerLink="/user-dashboard" >
+            <mat-icon mat-list-icon style="margin-top: 0;">logout</mat-icon>
+            <span style="margin-top: 0; margin-left: 10px;">Выйти </span>
+        </button>
+    </mat-action-list>
+</mat-card>

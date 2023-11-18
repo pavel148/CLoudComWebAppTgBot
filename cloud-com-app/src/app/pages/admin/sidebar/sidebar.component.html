@@ -1,0 +1,33 @@
+<mat-card>
+    <mat-action-list>
+        <div mat-subheader>Меню</div>
+        <button routerLink="/admin" mat-list-item style="align-items: center;">
+            <mat-icon mat-list-icon style="margin-top: 0;">home</mat-icon>
+            <span style="margin-top: 0; margin-left: 10px;">Главная</span>
+        </button>
+        <button mat-list-item routerLink="/admin/profile" >
+            <mat-icon mat-list-icon style="margin-top: 0;">account_circle</mat-icon>
+            <span style="margin-top: 0; margin-left: 10px;">Профиль</span>
+        </button>
+        <button mat-list-item routerLink="/admin/categories" >
+            <mat-icon mat-list-icon style="margin-top: 0;">list</mat-icon>
+            <span style="margin-top: 0; margin-left: 10px;">Категории</span>
+        </button>
+        <button mat-list-item routerLink="/admin/add-category" >
+            <mat-icon mat-list-icon style="margin-top: 0;">add_circle_outline</mat-icon>
+            <span style="margin-top: 0; margin-left: 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Создать категорию</span>
+        </button>
+        <button mat-list-item routerLink="/admin/quizzes" >
+            <mat-icon mat-list-icon style="margin-top: 0;">quiz</mat-icon>
+            <span style="margin-top: 0; margin-left: 10px;">Мои тесты</span>
+        </button>
+        <button mat-list-item routerLink="/admin/add-quiz" >
+            <mat-icon mat-list-icon style="margin-top: 0;">add</mat-icon>
+            <span style="margin-top: 0; margin-left: 10px;">Создать тест</span>
+        </button>
+        <button mat-list-item routerLink="/admin/profile" >
+            <mat-icon mat-list-icon style="margin-top: 0;">logout</mat-icon>
+            <span style="margin-top: 0; margin-left: 10px;">Выйти </span>
+        </button>
+    </mat-action-list>
+</mat-card>

@@ -1,0 +1,13 @@
+.truncate{
+    display:blick;
+    white-space:nowrap;
+    width:100%;
+    overflow:hidden;
+    text-overflow: ellipsis;;
+
+}
+
+.example-header-image {
+    background-image: url('../../../../assets/iconFrontendhackaton.png');
+    background-size: cover;
+  }
