@@ -2,6 +2,15 @@
 
 Ветвь "main" обеспечивает конфигурацию моей интерфейсной части на Angular. Чтобы перейти к интерфейсной части, перейдите в ветку "master"
 
+
+В ветке master находится клиент веб-приложения, разработанный на Angular с использованием TypeScript. 
+В ветке server расположен сервер, реализованный на языке Java с применением технологий Spring (Spring Boot + Hibernate). Эта ветка также содержит конфигурацию базы данных для проекта.
+
+
+
+
+
+
 # CloudComApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.9.
