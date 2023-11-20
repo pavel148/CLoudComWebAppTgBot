@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute,Router } from '@angular/router';
 import { QuizService } from 'src/app/services/quiz.service';
 import { CategoryService } from 'src/app/services/category.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-instructions',
@@ -15,7 +16,8 @@ export class InstructionsComponent implements OnInit {
   quiz:any;
   constructor(
     private _route:ActivatedRoute,
-    private _quiz:QuizService
+    private _quiz:QuizService,
+    private _router:Router
 
   ){}
   ngOnInit(): void {
@@ -34,4 +36,23 @@ export class InstructionsComponent implements OnInit {
     )
   }
 
+  //[routerLink]="'/start/'+qid" 
+startQuiz(){
+  Swal.fire({
+    title: "Хотите начать тестирование?",
+    showCancelButton: true,
+    cancelButtonText: "Отменить",
+    confirmButtonText: "Начать",
+    icon:'info',
+  }).then((result) => {
+    /* Read more about isConfirmed, isDenied below */
+    if (result.isConfirmed) {
+      
+      this._router.navigate(['/start/'+this.qid])
+
+    } else if (result.isDenied) {
+      Swal.fire("Changes are not saved", "", "info");
+    }
+  });
+}
 }
