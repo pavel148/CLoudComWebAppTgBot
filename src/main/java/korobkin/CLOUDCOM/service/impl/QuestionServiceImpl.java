@@ -3,14 +3,13 @@ package korobkin.CLOUDCOM.service.impl;
 import korobkin.CLOUDCOM.model.testing.Question;
 import korobkin.CLOUDCOM.model.testing.Quiz;
 import korobkin.CLOUDCOM.repo.QuestionRepository;
-import korobkin.CLOUDCOM.repo.QuizeRepository;
 import korobkin.CLOUDCOM.service.QuestionService;
-import korobkin.CLOUDCOM.service.QuizService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
 import java.util.Set;
-
+@Service
 public class QuestionServiceImpl implements QuestionService {
 
     @Autowired
@@ -40,5 +39,16 @@ public class QuestionServiceImpl implements QuestionService {
     @Override
     public Set<Question> getQuestionsOfQuiz(Quiz quiz) {
         return this.questionRepository.findByQuiz(quiz);
+    }
+
+    @Override
+    public void deleteQuestion(Long quesId) {
+
+        this.questionRepository.deleteById(quesId);
+    }
+
+    @Override
+    public Question get(Long questionsId) {
+        return this.questionRepository.getOne(questionsId);
     }
 }

@@ -17,7 +17,7 @@ public class Quiz {
 
     private String title;
 
-
+    @Column(length = 5000)
     private String description;
 
 
@@ -101,5 +101,10 @@ public class Quiz {
 
     public void setCategory(Category category) {
         this.category = category;
+    }
+
+
+    public Long getqId() {
+        return qId;
     }
 }

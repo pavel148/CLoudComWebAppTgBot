@@ -1,17 +1,20 @@
 package korobkin.CLOUDCOM.service.impl;
 
+import korobkin.CLOUDCOM.model.testing.Category;
 import korobkin.CLOUDCOM.model.testing.Quiz;
-import korobkin.CLOUDCOM.repo.QuizeRepository;
+import korobkin.CLOUDCOM.repo.QuizRepository;
 import korobkin.CLOUDCOM.service.QuizService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
-
+@Service
 public class QuizServiceImpl implements QuizService {
 
     @Autowired
-    private QuizeRepository quizeRepository;
+    private QuizRepository quizeRepository;
 
 
     @Override
@@ -36,8 +39,30 @@ public class QuizServiceImpl implements QuizService {
 
     @Override
     public void deleteQuiz(Long quizId) {
-            Quiz quiz=new Quiz();
-            quiz.setqId(quizId);
-            this.quizeRepository.delete(quiz);
+
+            this.quizeRepository.deleteById(quizId);
     }
+
+    @Override
+    public List<Quiz> getQuizzesOfCategory(Category category) {
+        return this.quizeRepository.findByCategory(category);
+    }
+
+
+    //Получить активные категории тестов
+    @Override
+    public List<Quiz> getActiveQuizzes() {
+        return this.quizeRepository.findByActive(true);
+    }
+
+    @Override
+    public List<Quiz> getActiveQuizzesOfCategory(Category c) {
+        return this.quizeRepository.findByCategoryAndActive(c,true);
+    }
+
+
+
+
+
+
 }

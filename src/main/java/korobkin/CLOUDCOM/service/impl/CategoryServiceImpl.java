@@ -4,10 +4,11 @@ import korobkin.CLOUDCOM.model.testing.Category;
 import korobkin.CLOUDCOM.repo.CategoryRepository;
 import korobkin.CLOUDCOM.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.LinkedHashSet;
 import java.util.Set;
-
+@Service
 public class CategoryServiceImpl implements CategoryService {
 
     @Autowired
@@ -26,8 +27,10 @@ public class CategoryServiceImpl implements CategoryService {
         return this.categoryRepository.save(category);
     }
 
+
+
     @Override
-    public Set<Category> getCategory() {
+    public Set<Category> getCategories() {
         return new LinkedHashSet<>(this.categoryRepository.findAll());
     }
 
