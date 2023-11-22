@@ -1,8 +1,8 @@
 #database configuration
-
-spring.datasource.url=jdbc:mysql://host.docker.internal:3307/tg-bot
-spring.datasource.username=root
-spring.datasource.password=root
+server.port=8081
+spring.datasource.url=jdbc:mysql://192.168.0.174:3306/tgbot?serverTimezone=Europe/Moscow
+spring.datasource.username=ADMIN
+spring.datasource.password=ADMIN
 
 spring.datasource.driver-class=com.mysql.jdbc.Driver
 
