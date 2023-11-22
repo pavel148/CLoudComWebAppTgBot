@@ -11,7 +11,7 @@
         <mat-card *ngFor="let q of questions; let i = index" class="mt20 w100">
             <mat-card-content>
                 <p>
-                    <b> Q{{i+1}}</b> <span class="ml20" [innerHTML]="q.content">{{q.content}}</span>
+                    <b> Вопрос {{i+1}}</b> <span class="ml20" [innerHTML]="q.content">{{q.content}}</span>
                 </p>
                 <div class="container-fluid">
                 <div class="row">
@@ -37,7 +37,7 @@
 
             <mat-card-actions>
                 <button mat-button (click)='deleteQuestion(q.quesId)'color="warn">УДАЛИТЬ</button>
-                <button mat-button color="primary">ОБНОВИТЬ</button>
+                <!--<button mat-button color="primary">ОБНОВИТЬ</button>-->
             </mat-card-actions>
 
         </mat-card>

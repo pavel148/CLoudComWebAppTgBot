@@ -1,3 +1,10 @@
 .exemple-spacer{
     flex: 1 1 auto;
 }
+.slogan {
+    flex: 1; /* Расширяет пространство до оставшихся элементов */
+}
+
+.slogan-text {
+    text-align: center; /* Выравнивает текст по центру */
+}

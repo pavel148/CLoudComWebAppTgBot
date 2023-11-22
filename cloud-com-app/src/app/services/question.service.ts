@@ -19,7 +19,9 @@ export class QuestionService {
 
 
 
-
+public updateQuestion(questionId: any, question: any){
+  return this._http.put(`${baseUrl}/question/${questionId}`, question);
+ }
 
 public addQuestion(question:any){
  return this._http.post(`${baseUrl}/question/`,question);

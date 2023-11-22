@@ -113,4 +113,21 @@ Swal.fire({
 });
   }
 
+  // public updateData() {
+  //   // Валидация
+
+  //   // Предположим, что selectedQuestion содержит идентификатор вопроса (questionId) и данные для обновления (question)
+  //   this._question.updateQuestion(this.selectedQuestion.questionId, this.selectedQuestion.question).subscribe(
+  //     (data) => {
+  //       Swal.fire('Успех !!', 'тест обновлен', 'success').then((e) => {
+  //         this._router.navigate(['/admin/quizzes']);
+  //       });
+  //     },
+  //     (error) => {
+  //       Swal.fire('Ошибка', 'ошибка в обновлении теста', 'error');
+  //       console.log(error);
+  //     }
+  //   );
+  // }
+  
 }
