@@ -30,7 +30,7 @@ public class Question {
     private String option3;
     private String option4;
 
-    @JsonIgnore
+
     private String answer;
 
     @Transient //Без сохранения в БД
@@ -97,12 +97,12 @@ public class Question {
         this.option4 = option4;
     }
 
-    @JsonIgnore
+
     public String getAnswer() {
         return answer;
     }
 
-    @JsonProperty("answer")
+
     public void setAnswer(String answer) {
         this.answer = answer;
     }
