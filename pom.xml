@@ -14,7 +14,7 @@
 	<name>CLOUDCOM</name>
 	<description>Project Telegram bot</description>
 	<properties>
-		<java.version>14</java.version>
+		<java.version>11</java.version>
 		<spring.version>2.5.6</spring.version>
 	</properties>
 	<dependencies>
@@ -85,6 +85,9 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<version>${project.parent.version}</version>
+				<configuration>
+					<executable>true</executable>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
