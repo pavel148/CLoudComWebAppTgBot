@@ -1,0 +1,26 @@
+ Развертывание
+
+ Установка Node.js и npm:
+sudo apt update
+sudo apt install nodejs
+sudo apt install npm
+
+
+ Установка Angular 
+npm install -g @angular/cli
+
+Проверка версий
+node -v
+npm -v
+ng --version
+
+перейти с папку cloud-com-app
+cd cloud-com-app
+npm install
+
+ng serve
+или 
+ng build
+
+После будет доступно по адресу 
+http://localhost:4200/ 
