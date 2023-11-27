@@ -11,7 +11,7 @@
 
 Разработанный бот с web app: https://t.me/tgdubnabot
 
-
+Веб приложение: https://tgbotdubna.ru
 
 # CloudComApp
 
